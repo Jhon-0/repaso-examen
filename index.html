@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Estudio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            flex-direction: column;
+        }
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 800px;
+        }
+        .card {
+            width: 250px;
+            height: 150px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.5s;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+        .card .front, .card .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .card .front {
+            background-color: white;
+            color: black;
+        }
+        .card .back {
+            transform: rotateY(180deg);
+            background-color: #3498db;
+            color: white;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards-container" id="cards-container"></div>
+    <div class="button-container">
+        <button onclick="reloadFlashcards()">Cargar más tarjetas</button>
+    </div>
+
+    <script>
+        const flashcards = [
+            { pregunta: "¿Qué es la seguridad en el hardware?", respuesta: "Busca garantizar su buen funcionamiento mediante la monitorización y herramientas como el polímetro." },
+            { pregunta: "¿Qué es un SAI?", respuesta: "Un sistema de alimentación ininterrumpida que protege equipos contra cortes de energía y variaciones de voltaje." },
+            { pregunta: "¿Cuáles son los tipos de SAI?", respuesta: "Off-line, In-line y On-line." },
+            { pregunta: "¿Qué problemas soluciona un SAI?", respuesta: "Protege contra cortes de energía, sobrevoltajes, bajadas de tensión, ruido eléctrico y picos de corriente." },
+            { pregunta: "¿Cómo funciona un SAI Off-line?", respuesta: "Usa la electricidad de la red y solo genera su propia energía cuando hay un problema. No regula el voltaje." },
+            { pregunta: "¿Qué es un RAID?", respuesta: "Un sistema de almacenamiento que combina múltiples discos para mejorar seguridad y rendimiento." },
+            { pregunta: "¿Cuáles son los tipos de RAID?", respuesta: "RAID 0, RAID 1, RAID 5, RAID 10, entre otros." },
+            { pregunta: "¿Qué es un firewall?", respuesta: "Un sistema que filtra el tráfico de red para bloquear accesos no autorizados." },
+            { pregunta: "¿Cómo se crea una contraseña segura?", respuesta: "Debe tener al menos 8 caracteres, incluir mayúsculas, minúsculas, números y símbolos." },
+            { pregunta: "¿Qué es una VPN?", respuesta: "Una red privada virtual que permite conexiones seguras a través de Internet." },
+            { pregunta: "¿Qué es un NAS?", respuesta: "Un dispositivo de almacenamiento en red que permite compartir archivos de forma centralizada." },
+            { pregunta: "¿Qué es una SAN?", respuesta: "Una red dedicada a almacenamiento que conecta servidores y dispositivos de almacenamiento de alta velocidad." },
+            { pregunta: "¿Cuáles son los tipos de copias de seguridad?", respuesta: "Copias totales, diferenciales e incrementales." },
+            { pregunta: "¿Qué es un IDS?", respuesta: "Un sistema de detección de intrusos que monitorea el tráfico de red en tiempo real." },
+            { pregunta: "¿Qué es la autenticación de doble factor?", respuesta: "Es un método de seguridad que requiere dos formas de verificación para acceder a una cuenta o sistema." },
+            { pregunta: "¿Qué es un ataque de ingeniería social?", respuesta: "Un método de ataque en el que se manipula a una persona para obtener información confidencial." }
+        ];
+
+        function createFlashcard(flashcard) {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            
+            const front = document.createElement('div');
+            front.classList.add('front');
+            front.innerText = flashcard.pregunta;
+            
+            const back = document.createElement('div');
+            back.classList.add('back');
+            back.innerText = flashcard.respuesta;
+            
+            card.appendChild(front);
+            card.appendChild(back);
+            
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+            
+            return card;
+        }
+
+        function loadFlashcards() {
+            const container = document.getElementById('cards-container');
+            container.innerHTML = '';
+            shuffleArray(flashcards).slice(0, 5).forEach(flashcard => {
+                container.appendChild(createFlashcard(flashcard));
+            });
+        }
+
+        function reloadFlashcards() {
+            loadFlashcards();
+        }
+
+        function shuffleArray(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        document.addEventListener("DOMContentLoaded", loadFlashcards);
+    </script>
+</body>
+</html>
