@@ -91,6 +91,7 @@
 
     <script>
         const flashcards = [
+    // PREGUNTAS ORIGINALES
     { pregunta: "¿Qué es la seguridad en el hardware?", respuesta: "Busca garantizar su buen funcionamiento mediante la monitorización y herramientas como el polímetro." },
     { pregunta: "¿Qué es un SAI?", respuesta: "Un sistema de alimentación ininterrumpida que protege equipos contra cortes de energía y variaciones de voltaje." },
     { pregunta: "¿Cuáles son los tipos de SAI?", respuesta: "Off-line, In-line y On-line." },
@@ -105,7 +106,7 @@
     { pregunta: "¿Qué es un ataque de fuerza bruta?", respuesta: "Un método en el que un atacante prueba todas las combinaciones posibles de contraseñas hasta encontrar la correcta." },
     { pregunta: "¿Qué es un ataque Man-in-the-Middle?", respuesta: "Es una técnica en la que un atacante intercepta la comunicación entre dos partes sin que lo sepan." },
 
-    // NUEVAS PREGUNTAS
+    // NUEVAS PREGUNTAS ORIGINALES
     { pregunta: "¿Qué es un firewall?", respuesta: "Es un sistema de seguridad que controla y filtra el tráfico de red para proteger un sistema de accesos no autorizados." },
     { pregunta: "¿Qué es la ingeniería social en ciberseguridad?", respuesta: "Es una técnica de ataque que manipula a las personas para obtener información confidencial." },
     { pregunta: "¿Qué es un ataque de phishing?", respuesta: "Es un tipo de ataque en el que los atacantes se hacen pasar por entidades de confianza para robar información personal." },
@@ -125,8 +126,36 @@
     { pregunta: "¿Qué es el principio de menor privilegio en ciberseguridad?", respuesta: "Es una práctica de seguridad que otorga a los usuarios solo los permisos mínimos necesarios para realizar su trabajo." },
     { pregunta: "¿Qué es un ataque Zero-Day?", respuesta: "Es una vulnerabilidad explotada antes de que el fabricante tenga tiempo de corregirla." },
     { pregunta: "¿Qué es la segmentación de red y por qué es importante?", respuesta: "Es la división de una red en partes más pequeñas para limitar la propagación de ataques y mejorar la seguridad." },
-    { pregunta: "¿Cómo funcionan las copias de seguridad incrementales?", respuesta: "Solo almacenan los archivos modificados desde la última copia de seguridad, ahorrando espacio y tiempo." }
+    { pregunta: "¿Cómo funcionan las copias de seguridad incrementales?", respuesta: "Solo almacenan los archivos modificados desde la última copia de seguridad, ahorrando espacio y tiempo." },
+
+    // NUEVAS PREGUNTAS AÑADIDAS (BASADAS EN TODOS LOS DOCUMENTOS)
+    { pregunta: "¿Qué es Fail2Ban y cómo protege un servidor?", respuesta: "Es una herramienta que analiza los archivos de registro y bloquea las IPs que superan un número determinado de intentos fallidos." },
+    { pregunta: "¿Qué son los jails en Fail2Ban?", respuesta: "Son conjuntos de reglas que asocian un filtro, un archivo de log y una acción para un servicio específico (SSH, Apache, etc.)." },
+    { pregunta: "¿Qué es un proxy inverso y para qué se utiliza?", respuesta: "Es un servidor que recibe peticiones de los clientes y las redirige a servidores internos, mejorando la seguridad y el rendimiento." },
+    { pregunta: "¿Cuál es la diferencia entre un proxy directo y un proxy inverso?", respuesta: "El proxy directo se ubica del lado del cliente para acceder a la red, mientras que el proxy inverso está del lado del servidor para proteger y distribuir el tráfico." },
+    { pregunta: "¿En qué consiste la configuración básica de OpenVPN?", respuesta: "Incluye la generación de certificados, la definición de parámetros de cifrado y la creación de archivos de configuración para el servidor y los clientes." },
+    { pregunta: "¿Cómo se garantiza la integridad de un archivo usando una función hash?", respuesta: "Comparando el hash original del archivo con el hash calculado tras su descarga o manipulación; si coinciden, no ha sido alterado." },
+    { pregunta: "¿Qué es el kernel en un sistema operativo?", respuesta: "Es el núcleo del sistema operativo que gestiona la interacción entre el hardware y el software." },
+    { pregunta: "¿Qué es la monitorización del sistema y por qué es importante?", respuesta: "Es la supervisión de logs y eventos para detectar incidentes de seguridad y comportamientos anómalos en el sistema." },
+    { pregunta: "¿Qué son los registros (logs) de sucesos en Windows?", respuesta: "Archivos que registran eventos del sistema, aplicaciones y seguridad, útiles para la auditoría y la resolución de problemas." },
+    { pregunta: "¿Qué tipos de copias de seguridad existen?", respuesta: "Completa, incremental y diferencial. La completa copia todos los datos, la incremental solo los modificados desde la última copia y la diferencial desde la última completa." },
+    { pregunta: "¿Qué es un clúster de servidores?", respuesta: "Un conjunto de servidores que trabajan como una sola entidad para mejorar la disponibilidad, la tolerancia a fallos y el rendimiento." },
+    { pregunta: "¿Cuál es la diferencia entre un NAS y un SAN?", respuesta: "Un NAS (Network Attached Storage) se conecta a la red y comparte archivos a nivel de sistema de ficheros, mientras que un SAN (Storage Area Network) proporciona acceso a nivel de bloque para servidores." },
+    { pregunta: "¿Qué es RAID 0 y qué ventaja ofrece?", respuesta: "Es un nivel de RAID que distribuye los datos entre varios discos para aumentar la velocidad, pero no ofrece redundancia." },
+    { pregunta: "¿Cómo se calcula la capacidad de un RAID 5 con n discos?", respuesta: "Es (n - 1) por la capacidad de un disco, porque se usa el equivalente a un disco para la paridad." },
+    { pregunta: "¿Cuál es la ventaja principal de RAID 1?", respuesta: "La redundancia total: los datos se espejan en dos o más discos, permitiendo continuar operando si uno falla." },
+    { pregunta: "¿Qué es un ataque de escalada de privilegios?", respuesta: "Es cuando un atacante obtiene permisos más altos de los que debería tener, comprometiendo aún más el sistema." },
+    { pregunta: "¿Qué es un ataque de diccionario?", respuesta: "Es un tipo de fuerza bruta que utiliza palabras comunes o listas de contraseñas conocidas para intentar acceder a un sistema." },
+    { pregunta: "¿Qué es un microcorte y cómo lo soluciona un SAI?", respuesta: "Un microcorte es una interrupción muy breve del suministro eléctrico; el SAI mantiene la alimentación estable en ese intervalo." },
+    { pregunta: "¿Cuál es la diferencia principal entre SAI In-line y SAI On-line?", respuesta: "El SAI In-line regula la tensión con AVR, mientras que el SAI On-line hace doble conversión continua y no presenta tiempo de conmutación." },
+    { pregunta: "¿Qué son los discos dinámicos en Windows y para qué se usan?", respuesta: "Son discos configurados para permitir volúmenes repartidos o RAID por software, ofreciendo más flexibilidad que los discos básicos." },
+    { pregunta: "¿Qué es la entropía en una contraseña y por qué es importante?", respuesta: "Es la medida de impredecibilidad en la contraseña; a mayor entropía, más difícil es que sea descubierta por ataques de fuerza bruta." },
+    { pregunta: "¿Qué es la prueba de integridad en el contexto de copias de seguridad?", respuesta: "Es un proceso para verificar que los datos respaldados se pueden recuperar correctamente y no están corruptos." },
+    { pregunta: "¿Cómo protege Fail2Ban un servidor SSH?", respuesta: "Monitorea /var/log/auth.log y, tras cierto número de intentos fallidos, bloquea la IP atacante mediante el firewall." },
+    { pregunta: "¿Por qué es importante actualizar el firmware de un SAI On-line?", respuesta: "Para corregir posibles errores y optimizar la gestión de la batería y la regulación del voltaje." },
+    { pregunta: "¿Qué es un análisis forense informático?", respuesta: "Es el proceso de recopilar, analizar y preservar evidencias digitales de forma que puedan presentarse legalmente." }
 ];
+
 
 
         function createFlashcard(flashcard) {
