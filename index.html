@@ -294,6 +294,55 @@
       pregunta: "¿Cómo se relacionan la implementación de políticas de seguridad, la formación de empleados y el uso de tecnología en la mitigación integral de riesgos cibernéticos?",
       respuesta: "La seguridad integral se logra combinando políticas claras, educación continua para fomentar una cultura de seguridad y la aplicación de tecnologías avanzadas que permitan detectar y responder proactivamente ante amenazas."
     }
+
+    {
+    pregunta: "¿Qué es NGINX y cuál es su principal funcionalidad?",
+    respuesta: "NGINX es un software de servidor web de alto rendimiento que se utiliza principalmente para manejar tráfico web. Además, su funcionalidad va mucho más allá, ya que puede actuar como proxy inverso, balanceador de carga, servidor de correo y Gateway API en entornos de microservicios."
+  },
+  {
+    pregunta: "¿Cuáles son los principales usos de NGINX como servidor web?",
+    respuesta: "1. Servir contenido estático (HTML, imágenes, CSS, JavaScript).\n2. Manejar un gran número de conexiones simultáneas de manera eficiente."
+  },
+  {
+    pregunta: "¿Qué función cumple NGINX como proxy inverso?",
+    respuesta: "NGINX actúa como intermediario entre los clientes y los servidores backend, redirigiendo las solicitudes y mejorando la seguridad al ocultar los detalles internos del sistema."
+  },
+  {
+    pregunta: "¿Cómo distribuye NGINX la carga en entornos con múltiples servidores?",
+    respuesta: "Mediante la función de balanceador de carga, NGINX distribuye el tráfico entre varios servidores backend usando métodos como round-robin, basado en IP o en función del peso asignado, evitando la sobrecarga en un solo servidor."
+  },
+  {
+    pregunta: "¿Qué ventajas aporta el uso de la caché en NGINX?",
+    respuesta: "NGINX puede almacenar en caché contenido tanto estático como dinámico, lo que reduce la carga en los servidores backend y mejora la velocidad de carga para los usuarios finales."
+  },
+  {
+    pregunta: "¿Cómo se utiliza NGINX como servidor proxy para correo?",
+    respuesta: "NGINX puede configurarse para actuar como proxy en protocolos de correo como IMAP, POP3 y SMTP, facilitando la gestión del tráfico de correo y mejorando la eficiencia en el procesamiento de mensajes."
+  },
+  {
+    pregunta: "¿Qué es un Gateway API y cómo se relaciona con NGINX?",
+    respuesta: "En sistemas basados en microservicios, NGINX se utiliza como Gateway API para enrutar las solicitudes a servicios específicos, integrando y gestionando el tráfico entre múltiples componentes del sistema."
+  },
+  {
+    pregunta: "¿Cuáles son las principales ventajas de NGINX?",
+    respuesta: "Entre sus ventajas destacan:\n• Rendimiento: Maneja miles de conexiones simultáneas con bajo consumo de recursos.\n• Escalabilidad: Se adapta fácilmente a entornos pequeños y grandes.\n• Flexibilidad: Su configuración modular permite personalizarlo para diversos usos.\n• Seguridad: Permite configuraciones con certificados SSL/TLS y WAF, entre otras medidas de protección."
+  },
+  {
+    pregunta: "Proporciona un ejemplo de cómo NGINX puede integrarse en un sitio web que sirve contenido estático y dinámico.",
+    respuesta: "Imagina un sitio web en el que:\n• NGINX actúa como servidor web para servir imágenes y archivos HTML (contenido estático).\n• NGINX funciona como proxy inverso, redirigiendo las solicitudes de búsqueda a un servidor backend que procesa y devuelve resultados dinámicos.\nDe esta forma, se optimiza el uso de recursos y se mejora la experiencia del usuario."
+  },
+  {
+    pregunta: "¿Qué es un servidor backend y cuál es su rol en una aplicación web?",
+    respuesta: "Un servidor backend es la parte del sistema que procesa las solicitudes enviadas desde el frontend. Sus funciones principales incluyen:\n• Procesar solicitudes y gestionar datos.\n• Ejecutar la lógica del sistema (cálculos, validaciones, etc.).\n• Conectarse a bases de datos para almacenar o recuperar información.\n• Enviar las respuestas procesadas de vuelta al frontend."
+  },
+  {
+    pregunta: "¿Cómo interactúan el frontend y el backend en una aplicación web?",
+    respuesta: "El proceso se desarrolla de la siguiente manera:\n1. El usuario interactúa con el frontend (por ejemplo, ingresando una consulta en un sitio web).\n2. El frontend envía la solicitud al servidor backend.\n3. El backend procesa la solicitud, consulta bases de datos y ejecuta la lógica necesaria.\n4. Finalmente, el backend envía una respuesta al frontend, que la presenta al usuario."
+  },
+  {
+    pregunta: "Da un ejemplo práctico de la interacción entre frontend y backend en una tienda en línea.",
+    respuesta: "Ejemplo:\n• Un usuario busca 'Criptomonedas de Trump' en una tienda en línea.\n• El frontend envía esta consulta al servidor backend.\n• El backend consulta la base de datos para encontrar productos relacionados y procesa la información.\n• Los resultados se devuelven al frontend, que muestra los productos encontrados al usuario."
+  }    
 ];
 
 
