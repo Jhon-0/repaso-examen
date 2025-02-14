@@ -91,259 +91,111 @@
 
     <script>
         const flashcards = [
-    // PREGUNTAS ORIGINALES
-    {
-      pregunta: "¿Qué es la seguridad en el hardware?",
-      respuesta: "La seguridad en el hardware se refiere a las medidas y prácticas que garantizan el correcto funcionamiento físico de los dispositivos mediante la monitorización y el uso de herramientas de diagnóstico."
-    },
-    {
-      pregunta: "¿Qué función cumple un SAI en un sistema informático?",
-      respuesta: "Un SAI (Sistema de Alimentación Ininterrumpida) suministra energía de reserva para mantener operativos equipos críticos durante fallos o fluctuaciones eléctricas."
-    },
-    {
-      pregunta: "¿Cuáles son los tipos básicos de SAI?",
-      respuesta: "Los tipos básicos de SAI son: off-line, in-line y on-line, que varían en su tecnología y capacidad de protección."
-    },
-    {
-      pregunta: "¿Qué caracteriza a un SAI off-line?",
-      respuesta: "Un SAI off-line es el más básico y económico, activándose solo cuando ocurre un fallo eléctrico, sin regular la corriente de forma continua."
-    },
-    {
-      pregunta: "¿Qué diferencia principal existe entre un SAI in-line y uno off-line?",
-      respuesta: "El SAI in-line incorpora un regulador de voltaje (AVR) que estabiliza la corriente, a diferencia del off-line que solo activa la batería en caso de fallo."
-    },
-    {
-      pregunta: "¿Cuál es la ventaja principal de un SAI on-line?",
-      respuesta: "El SAI on-line ofrece energía limpia y sin interrupciones, mediante doble conversión, ideal para entornos industriales y equipos sensibles."
-    },
-    {
-      pregunta: "¿Qué es RAID y para qué se utiliza?",
-      respuesta: "RAID es una tecnología que distribuye y, en algunos casos, replica datos en varios discos para mejorar el rendimiento, la seguridad y la tolerancia a fallos."
-    },
-    {
-      pregunta: "¿Cuál es la diferencia esencial entre RAID 0 y RAID 1?",
-      respuesta: "RAID 0 distribuye los datos entre varios discos para incrementar la velocidad, sin ofrecer redundancia, mientras que RAID 1 duplica los datos para asegurar la información."
-    },
-    {
-      pregunta: "¿Qué función cumple el kernel en un sistema operativo Linux?",
-      respuesta: "El kernel es el núcleo del sistema operativo que gestiona los recursos, controla el hardware y permite la comunicación entre aplicaciones y dispositivos."
-    },
-    {
-      pregunta: "¿Qué son los registros (logs) en un sistema operativo?",
-      respuesta: "Los registros son archivos que almacenan eventos, errores y actividades del sistema, ayudando en el monitoreo y diagnóstico de problemas."
-    },
-    {
-      pregunta: "¿Qué es HTTPS y cómo protege la información?",
-      respuesta: "HTTPS es un protocolo que encripta la comunicación entre el navegador y el servidor, evitando que terceros intercepten o alteren los datos transmitidos."
-    },
-    {
-      pregunta: "¿Qué función tiene un firewall en una red?",
-      respuesta: "Un firewall filtra el tráfico de red, permitiendo conexiones autorizadas y bloqueando accesos no deseados, lo que protege los sistemas frente a amenazas externas."
-    },
-    {
-      pregunta: "¿Qué es una VPN y para qué se utiliza?",
-      respuesta: "Una VPN crea una conexión segura y cifrada sobre una red pública, permitiendo el acceso remoto a recursos internos de forma protegida."
-    },
-    {
-      pregunta: "¿Qué es un IDS y cómo ayuda en la seguridad de la red?",
-      respuesta: "Un IDS (Sistema de Detección de Intrusos) monitorea el tráfico de red en busca de actividades sospechosas, alertando a los administradores ante posibles ataques."
-    },
-    {
-      pregunta: "¿Qué significa redundancia en el contexto del almacenamiento de datos?",
-      respuesta: "La redundancia implica duplicar componentes o datos para que, ante una falla, otro elemento pueda asumir la función y evitar la pérdida de información."
-    },
-    {
-      pregunta: "¿Qué es un NAS y cuál es su función principal?",
-      respuesta: "Un NAS (Network Attached Storage) es un dispositivo de almacenamiento conectado a la red que permite compartir y acceder a datos entre múltiples usuarios o equipos."
-    },
-    {
-      pregunta: "¿Qué es un SAN y cuáles son sus ventajas?",
-      respuesta: "Un SAN (Storage Area Network) es una red de almacenamiento especializada que ofrece alta velocidad, gran capacidad y redundancia, ideal para entornos empresariales."
-    },
-    {
-      pregunta: "¿Por qué es importante la monitorización en la gestión de un SAI?",
-      respuesta: "La monitorización permite detectar fallos en tiempo real, controlar el estado de la batería y programar respuestas automáticas, asegurando un funcionamiento óptimo del SAI."
-    },
-    {
-      pregunta: "¿Por qué se requiere mantenimiento periódico en un SAI?",
-      respuesta: "El mantenimiento es esencial para asegurar que las baterías y demás componentes funcionen correctamente, evitando fallos inesperados y prolongando la vida útil del equipo."
-    },
-    {
-      pregunta: "¿Qué son las cuotas de disco y para qué sirven en un sistema?",
-      respuesta: "Las cuotas de disco limitan el espacio de almacenamiento asignado a cada usuario, previniendo el abuso de recursos y asegurando el rendimiento del sistema."
-    },
-    {
-      pregunta: "¿Qué es el cifrado de extremo a extremo?",
-      respuesta: "El cifrado de extremo a extremo garantiza que solo el emisor y el receptor puedan leer la información, protegiéndola de accesos no autorizados durante la transmisión."
-    },
-    {
-      pregunta: "¿Qué es un antimalware?",
-      respuesta: "Un antimalware es un software diseñado para detectar y eliminar diversas amenazas (virus, troyanos, spyware) que pueden comprometer la seguridad de un sistema."
-    },
-    {
-      pregunta: "¿Para qué sirve el software de congelación en un equipo?",
-      respuesta: "El software de congelación restaura la configuración original del equipo en cada reinicio, evitando cambios no autorizados y protegiendo contra infecciones o alteraciones maliciosas."
-    },
-    {
-      pregunta: "¿Cómo se genera una contraseña segura?",
-      respuesta: "Una contraseña segura debe tener al menos 8 caracteres, combinando mayúsculas, minúsculas, números y símbolos, evitando información personal o secuencias predecibles."
-    },
-    {
-      pregunta: "¿Qué diferencia existe entre una política de firewall restrictiva y una permisiva?",
-      respuesta: "Una política restrictiva bloquea todo el tráfico no autorizado, mientras que una permisiva permite más conexiones, lo que puede incrementar el riesgo de vulnerabilidades."
-    }
-    // NUEVAS PREGUNTAS ORIGINALES
-            
-    {
-      pregunta: "¿Cómo influye la monitorización en la optimización del rendimiento y la seguridad de un SAI en entornos empresariales?",
-      respuesta: "La monitorización permite ajustar parámetros en tiempo real, detectar deterioros en la batería y automatizar respuestas ante incidencias, reduciendo tiempos de inactividad y mejorando la protección de equipos críticos."
-    },
-    {
-      pregunta: "¿Cuáles son las implicaciones de la doble conversión en un SAI on-line en términos de eficiencia energética?",
-      respuesta: "La doble conversión ofrece energía continua y limpia, pero puede generar mayor consumo energético y requerir un mantenimiento más riguroso para mantener su eficiencia operativa."
-    },
-    {
-      pregunta: "¿Qué desafíos presenta la implementación de RAID por software frente a RAID por hardware?",
-      respuesta: "RAID por software depende de los recursos del sistema, lo que puede afectar el rendimiento, mientras que RAID por hardware ofrece mayor velocidad y fiabilidad, aunque con mayor coste y complejidad en actualizaciones."
-    },
-    {
-      pregunta: "¿Cómo se integra la monitorización de un SAI con otros sistemas de gestión de infraestructura IT?",
-      respuesta: "Mediante el uso de APIs y software centralizado, la monitorización del SAI se puede conectar con sistemas de gestión y alerta, permitiendo respuestas automatizadas y una visión unificada del estado de la infraestructura."
-    },
-    {
-      pregunta: "¿De qué forma contribuye la redundancia en sistemas RAID y clusters a la tolerancia a fallos en entornos críticos?",
-      respuesta: "La redundancia permite que, ante la falla de un componente, otros asuman la carga sin interrupción del servicio, asegurando la continuidad operativa y protegiendo la integridad de los datos."
-    },
-    {
-      pregunta: "¿Qué aspectos se deben considerar al configurar un cluster de servidores para garantizar alto rendimiento y alta disponibilidad?",
-      respuesta: "Es fundamental seleccionar hardware compatible, configurar correctamente la red y el middleware, y establecer políticas de redundancia y balanceo de carga que permitan la conmutación automática ante fallos."
-    },
-    {
-      pregunta: "¿Cuáles son los retos técnicos y económicos de implementar una SAN en grandes empresas?",
-      respuesta: "Los retos incluyen la alta inversión inicial, la complejidad en la configuración y mantenimiento, y la necesidad de equilibrar la velocidad y redundancia sin comprometer la escalabilidad del sistema."
-    },
-    {
-      pregunta: "¿Cómo impacta el uso de protocolos de encriptación avanzados en el rendimiento de las comunicaciones HTTPS en entornos de alto tráfico?",
-      respuesta: "La encriptación avanzada puede aumentar la carga en los servidores debido a procesos criptográficos intensivos, por lo que se debe optimizar la infraestructura para balancear seguridad y rendimiento."
-    },
-    {
-      pregunta: "¿Qué estrategias pueden mitigar las amenazas internas en una organización, dada la dificultad de distinguir accesos legítimos de maliciosos?",
-      respuesta: "Implementar controles de acceso estrictos, monitoreo continuo, auditorías regulares y tecnologías de detección de anomalías ayuda a identificar y limitar las amenazas provenientes de usuarios internos."
-    },
-    {
-      pregunta: "¿Cómo se evalúa la efectividad de un sistema de detección de intrusos (IDS) en una red compleja?",
-      respuesta: "Se evalúa a través de pruebas de penetración, análisis de falsos positivos y negativos, y la capacidad de respuesta ante ataques simulados, asegurando una detección oportuna y precisa."
-    },
-    {
-      pregunta: "¿Qué impacto tiene la fragmentación de datos en un sistema RAID respecto a rendimiento y tiempo de recuperación?",
-      respuesta: "La fragmentación puede ralentizar el acceso a los datos y complicar la reconstrucción tras un fallo, lo que requiere algoritmos de optimización y mantenimiento periódico para mitigar su efecto."
-    },
-    {
-      pregunta: "¿Cómo puede afectar una actualización del kernel en Linux a la estabilidad y seguridad de un entorno productivo?",
-      respuesta: "Aunque las actualizaciones del kernel suelen mejorar seguridad y rendimiento, pueden introducir incompatibilidades o fallos si no se prueban adecuadamente en entornos de staging antes de la implementación."
-    },
-    {
-      pregunta: "¿Qué técnicas avanzadas de encriptación se recomiendan para proteger datos en tránsito en redes corporativas?",
-      respuesta: "Se recomiendan protocolos como TLS 1.3 combinados con algoritmos de encriptación asimétrica y simétrica, que ofrecen un equilibrio entre seguridad robusta y rendimiento en entornos de alta demanda."
-    },
-    {
-      pregunta: "¿Cómo se pueden combinar estrategias de redundancia, balanceo de carga y tolerancia a fallos en un cluster para maximizar la disponibilidad de servicios?",
-      respuesta: "Integrando hardware redundante, configurando balanceadores de carga y estableciendo políticas de conmutación automática se garantiza que, ante fallos, los servicios se mantengan operativos sin interrupciones."
-    },
-    {
-      pregunta: "¿Qué consideraciones de seguridad son esenciales al implementar una VPN para conectar múltiples sucursales de una empresa?",
-      respuesta: "Es crucial definir protocolos de encriptación robustos, autenticar a los usuarios mediante certificados digitales o MFA, y monitorizar constantemente el tráfico para detectar accesos no autorizados."
-    },
-    {
-      pregunta: "¿Cómo se puede optimizar el rendimiento de un SAN sin comprometer la seguridad de los datos?",
-      respuesta: "Mediante la segmentación de la red SAN, la implementación de políticas de control de acceso estrictas y el uso de hardware y software de última generación que equilibre velocidad y encriptación."
-    },
-    {
-      pregunta: "¿Qué rol juegan las actualizaciones de firmware y software en la gestión de riesgos de dispositivos como SAI y firewalls?",
-      respuesta: "Las actualizaciones corrigen vulnerabilidades, mejoran el rendimiento y aseguran la compatibilidad con nuevas tecnologías, siendo fundamentales para mantener la integridad y seguridad de los sistemas."
-    },
-    {
-      pregunta: "¿Cuáles son las implicaciones de utilizar antimalware y antivirus de distintos proveedores en un mismo entorno corporativo?",
-      respuesta: "El uso de múltiples soluciones puede generar conflictos, aumentar la carga en el sistema y producir falsos positivos, por lo que es importante evaluar su compatibilidad y optar por una gestión centralizada de amenazas."
-    },
-    {
-      pregunta: "¿Cómo se puede implementar una política de contraseñas que equilibre seguridad y usabilidad en una organización heterogénea?",
-      respuesta: "Se puede lograr mediante requisitos mínimos de complejidad, autenticación multifactor, educación continua y el uso de herramientas de gestión de contraseñas que faciliten el cumplimiento sin afectar la productividad."
-    },
-    {
-      pregunta: "¿Qué mecanismos se pueden emplear para detectar y prevenir ataques de ingeniería social en entornos empresariales?",
-      respuesta: "La formación continua, simulacros de phishing y la implementación de políticas estrictas de verificación de identidad son esenciales para contrarrestar ataques basados en manipulación humana."
-    },
-    {
-      pregunta: "¿Cómo se evalúa el coste-beneficio de implementar sistemas de backup automatizados frente a procesos manuales de recuperación?",
-      respuesta: "Se debe analizar la frecuencia de respaldos, tiempos de recuperación, inversión en hardware/software y el impacto potencial en la productividad para determinar la solución más rentable y eficaz."
-    },
-    {
-      pregunta: "¿Qué desafíos técnicos plantea la integración de soluciones de seguridad en redes híbridas que combinan infraestructura local y en la nube?",
-      respuesta: "Los principales desafíos son la interoperabilidad, la coherencia en las políticas de seguridad y la gestión centralizada de accesos y datos en entornos heterogéneos."
-    },
-    {
-      pregunta: "¿Cómo influye el tamaño y complejidad de una red en la configuración de un firewall de nueva generación?",
-      respuesta: "Redes más extensas y complejas requieren firewalls con inspección profunda de paquetes, alta escalabilidad y configuraciones precisas para gestionar múltiples protocolos y amenazas simultáneas."
-    },
-    {
-      pregunta: "¿Qué estrategias avanzadas se pueden implementar para asegurar la continuidad operativa ante un fallo catastrófico en un data center?",
-      respuesta: "La replicación de datos en sitios geográficamente dispersos, la utilización de clusters de alta disponibilidad y la elaboración de planes de recuperación ante desastres permiten minimizar el impacto de fallos críticos."
-    },
-    {
-      pregunta: "¿Cómo se relacionan la implementación de políticas de seguridad, la formación de empleados y el uso de tecnología en la mitigación integral de riesgos cibernéticos?",
-      respuesta: "La seguridad integral se logra combinando políticas claras, educación continua para fomentar una cultura de seguridad y la aplicación de tecnologías avanzadas que permitan detectar y responder proactivamente ante amenazas."
-    }
+  // Primer conjunto de flashcards (seguridad, SAI, RAID, clusters, etc.)
+  { pregunta: "¿Cómo se define la seguridad en el hardware y por qué es fundamental?", respuesta: "La seguridad en el hardware consiste en garantizar el correcto funcionamiento físico de los dispositivos mediante la monitorización y el uso de herramientas como el polímetro, previniendo fallos y daños." },
+  { pregunta: "¿Qué instrumento se emplea para medir parámetros eléctricos y verificar el estado del hardware?", respuesta: "Se utiliza el polímetro, que permite medir variables como voltaje, corriente y resistencia, ayudando a detectar posibles fallos en el hardware." },
+  { pregunta: "¿Qué es un Sistema de Alimentación Ininterrumpida (SAI) y cuál es su función principal?", respuesta: "Un SAI es un dispositivo que suministra energía de reserva durante cortes o fluctuaciones eléctricas, protegiendo equipos críticos contra daños por caídas o picos de tensión." },
+  { pregunta: "¿Qué aspectos se deben evaluar al seleccionar un SAI adecuado para un entorno determinado?", respuesta: "Es importante considerar la capacidad en voltio-amperios, opciones de monitorización, posibilidades de actualización, soporte técnico y la confiabilidad del proveedor." },
+  { pregunta: "¿En qué se diferencian los SAI Off-line, In-line y On-line?", respuesta: "El SAI Off-line es el más básico y actúa solo durante un fallo eléctrico, el In-line incorpora un regulador de voltaje (AVR) para estabilizar la corriente, y el On-line utiliza doble conversión para ofrecer energía limpia y sin interrupciones." },
+  { pregunta: "¿Cómo contribuye la monitorización al correcto funcionamiento de un SAI?", respuesta: "La monitorización permite revisar en tiempo real el estado del SAI, detectar fallos en las baterías y configurar respuestas automáticas ante incidencias, lo que prolonga la vida útil del dispositivo." },
+  { pregunta: "¿Por qué es esencial realizar un mantenimiento periódico en las baterías de un SAI?", respuesta: "Las baterías se degradan con el tiempo; su revisión y reemplazo oportuno son cruciales para asegurar la continuidad del suministro eléctrico y evitar fallos en la protección de los equipos." },
+  { pregunta: "¿Qué significa la redundancia en sistemas de almacenamiento y cuál es su objetivo?", respuesta: "La redundancia implica replicar componentes críticos para que, en caso de fallo, otro elemento pueda asumir su función, aumentando la tolerancia a errores y la seguridad de la información." },
+  { pregunta: "¿Cómo mejora un sistema RAID la seguridad y el rendimiento del almacenamiento?", respuesta: "El RAID distribuye y, en algunos casos, replica los datos en varios discos, lo que permite mayor velocidad de acceso y protección de la información ante fallos de hardware." },
+  { pregunta: "¿Cuáles son las diferencias fundamentales entre un RAID gestionado por software y uno por hardware?", respuesta: "El RAID por software se administra a través del sistema operativo utilizando recursos del procesador, mientras que el RAID por hardware emplea una controladora dedicada, ofreciendo mayor fiabilidad y rendimiento." },
+  { pregunta: "¿Qué ventajas y desventajas presenta una configuración RAID 0?", respuesta: "RAID 0 mejora la velocidad al distribuir los datos entre varios discos, pero carece de redundancia, por lo que la falla de un disco puede provocar la pérdida total de la información." },
+  { pregunta: "¿De qué forma protege la configuración RAID 1 la información almacenada?", respuesta: "RAID 1 realiza una duplicación exacta de los datos en dos discos, ofreciendo alta tolerancia a fallos, aunque reduce la capacidad total de almacenamiento disponible." },
+  { pregunta: "¿Qué beneficios y limitaciones ofrece el uso del RAID 5?", respuesta: "RAID 5 distribuye datos y paridad entre los discos, lo que mejora la seguridad y el aprovechamiento del espacio, pero requiere al menos tres discos y es vulnerable si fallan dos simultáneamente." },
+  { pregunta: "¿Qué es un cluster de servidores y cómo beneficia a las empresas?", respuesta: "Un cluster de servidores es un conjunto de equipos que trabajan de forma conjunta para ofrecer alta disponibilidad, mayor rendimiento y escalabilidad, asegurando la continuidad operativa en entornos críticos." },
+  { pregunta: "¿Cómo se clasifican los clusters de servidores según sus funciones?", respuesta: "Se pueden clasificar en clusters de alto rendimiento (HC), alta disponibilidad (HA) y alta eficiencia (HT), de acuerdo a las necesidades de cálculo, confiabilidad o procesamiento intensivo." },
+  { pregunta: "¿Cuáles son los componentes esenciales que conforman un cluster de servidores?", respuesta: "Un cluster integra nodos (servidores), un sistema operativo multiproceso, conexiones de red de alta velocidad, middleware para la gestión y, en muchos casos, un sistema de almacenamiento compartido." },
+  { pregunta: "¿Qué ventajas ofrece la computación en la nube para el almacenamiento de datos?", respuesta: "La nube permite acceder a la información y aplicaciones desde cualquier ubicación, elimina la necesidad de infraestructura local y delega el mantenimiento en proveedores especializados." },
+  { pregunta: "¿En qué se diferencian un NAS y un SAN en cuanto a almacenamiento externo?", respuesta: "Un NAS (Network Attached Storage) es un dispositivo de almacenamiento conectado a la red accesible vía protocolos de archivo, mientras que un SAN (Storage Area Network) conecta servidores y dispositivos de almacenamiento a alta velocidad mediante una red especializada." },
+  { pregunta: "¿Cuál es el rol del kernel en un sistema operativo Linux?", respuesta: "El kernel es el núcleo de Linux, responsable de gestionar los recursos del sistema, controlar el hardware y facilitar la comunicación entre el software y los dispositivos." },
+  { pregunta: "¿Qué tipos de registros (logs) existen en un sistema operativo y por qué son importantes?", respuesta: "Existen registros de aplicación, sistema y seguridad; cada uno almacena información clave sobre eventos, errores y accesos, lo que ayuda a identificar y resolver problemas." },
+  { pregunta: "¿Cómo ayudan las cuotas de disco a mantener la estabilidad y seguridad en un sistema informático?", respuesta: "Las cuotas de disco limitan el espacio asignado a cada usuario, evitando saturaciones y posibles abusos que puedan comprometer el rendimiento y la integridad del sistema." },
+  { pregunta: "¿De qué manera HTTPS protege los datos durante su transmisión en la red?", respuesta: "HTTPS encripta la comunicación entre el navegador y el servidor, impidiendo que terceros intercepten o modifiquen la información transmitida." },
+  { pregunta: "¿Qué función cumple una VPN en la seguridad de las conexiones de red?", respuesta: "Una VPN establece una conexión segura y cifrada entre equipos, permitiendo el acceso remoto a la red de manera protegida contra interceptaciones." },
+  { pregunta: "¿Qué es un IDS y cómo ayuda en la seguridad de la red?", respuesta: "Un IDS (Sistema de Detección de Intrusos) monitorea el tráfico de red en busca de actividades sospechosas, alertando a los administradores ante posibles ataques." },
+  { pregunta: "¿Qué medidas de seguridad se implementan en redes inalámbricas para proteger la información?", respuesta: "Se aplican controles a nivel físico, de enlace y de aplicación, utilizando protocolos de encriptación como WPA/WPA2 para autenticar a los usuarios y cifrar la comunicación." },
+  { pregunta: "¿Cuáles son las diferencias principales entre los protocolos WEP y WPA/WPA2 en redes Wi-Fi?", respuesta: "WEP es un protocolo antiguo y vulnerable, mientras que WPA/WPA2 ofrece encriptación avanzada y métodos de autenticación robustos, mejorando significativamente la seguridad de la red." },
+  { pregunta: "¿Por qué las amenazas internas pueden representar un riesgo mayor que las externas?", respuesta: "Las amenazas internas provienen de usuarios con acceso legítimo al sistema, lo que les permite evadir controles y causar daños importantes sin levantar sospechas inmediatas." },
+  { pregunta: "¿Qué limitaciones tienen los antivirus en la lucha contra el malware?", respuesta: "Aunque los antivirus detectan y eliminan muchas amenazas, pueden generar falsas alarmas, no identificar todo el malware nuevo y dependen de actualizaciones constantes para mantener su efectividad." },
+  { pregunta: "¿En qué se diferencia un antimalware de un antivirus tradicional?", respuesta: "El antimalware se centra en proteger contra una gama más amplia de amenazas, como troyanos y spyware, utilizando técnicas de detección avanzadas que complementan la función del antivirus." },
+  { pregunta: "¿Qué es el software de congelación y en qué contextos se utiliza?", respuesta: "El software de congelación restaura la configuración original del equipo en cada reinicio, evitando cambios no autorizados y protegiendo contra infecciones o alteraciones maliciosas." },
+  { pregunta: "¿Qué precauciones se deben tomar al recibir correos electrónicos sospechosos?", respuesta: "Se debe evitar responder, no proporcionar información personal y verificar la autenticidad del remitente, ya que estos correos pueden contener enlaces o archivos maliciosos." },
+  { pregunta: "¿Cuáles son las mejores prácticas para crear una contraseña segura?", respuesta: "Se recomienda utilizar al menos 8 caracteres combinando mayúsculas, minúsculas, números y símbolos, evitando información personal o secuencias predecibles y actualizándola periódicamente." },
+  { pregunta: "¿Qué función desempeña un firewall en la protección de una red o equipo?", respuesta: "Un firewall actúa como barrera que controla el tráfico entrante y saliente, permitiendo solo las conexiones autorizadas y bloqueando accesos potencialmente peligrosos." },
+  { pregunta: "¿Cuál es la diferencia entre una política de firewall restrictiva y una permisiva?", respuesta: "Una política restrictiva bloquea todo el tráfico no autorizado, mientras que una permisiva permite más conexiones, lo que puede incrementar el riesgo de vulnerabilidades." },
 
-    {
-    pregunta: "¿Qué es NGINX y cuál es su principal funcionalidad?",
-    respuesta: "NGINX es un software de servidor web de alto rendimiento que se utiliza principalmente para manejar tráfico web. Además, su funcionalidad va mucho más allá, ya que puede actuar como proxy inverso, balanceador de carga, servidor de correo y Gateway API en entornos de microservicios."
-  },
-  {
-    pregunta: "¿Cuáles son los principales usos de NGINX como servidor web?",
-    respuesta: "1. Servir contenido estático (HTML, imágenes, CSS, JavaScript).\n2. Manejar un gran número de conexiones simultáneas de manera eficiente."
-  },
-  {
-    pregunta: "¿Qué función cumple NGINX como proxy inverso?",
-    respuesta: "NGINX actúa como intermediario entre los clientes y los servidores backend, redirigiendo las solicitudes y mejorando la seguridad al ocultar los detalles internos del sistema."
-  },
-  {
-    pregunta: "¿Cómo distribuye NGINX la carga en entornos con múltiples servidores?",
-    respuesta: "Mediante la función de balanceador de carga, NGINX distribuye el tráfico entre varios servidores backend usando métodos como round-robin, basado en IP o en función del peso asignado, evitando la sobrecarga en un solo servidor."
-  },
-  {
-    pregunta: "¿Qué ventajas aporta el uso de la caché en NGINX?",
-    respuesta: "NGINX puede almacenar en caché contenido tanto estático como dinámico, lo que reduce la carga en los servidores backend y mejora la velocidad de carga para los usuarios finales."
-  },
-  {
-    pregunta: "¿Cómo se utiliza NGINX como servidor proxy para correo?",
-    respuesta: "NGINX puede configurarse para actuar como proxy en protocolos de correo como IMAP, POP3 y SMTP, facilitando la gestión del tráfico de correo y mejorando la eficiencia en el procesamiento de mensajes."
-  },
-  {
-    pregunta: "¿Qué es un Gateway API y cómo se relaciona con NGINX?",
-    respuesta: "En sistemas basados en microservicios, NGINX se utiliza como Gateway API para enrutar las solicitudes a servicios específicos, integrando y gestionando el tráfico entre múltiples componentes del sistema."
-  },
-  {
-    pregunta: "¿Cuáles son las principales ventajas de NGINX?",
-    respuesta: "Entre sus ventajas destacan:\n• Rendimiento: Maneja miles de conexiones simultáneas con bajo consumo de recursos.\n• Escalabilidad: Se adapta fácilmente a entornos pequeños y grandes.\n• Flexibilidad: Su configuración modular permite personalizarlo para diversos usos.\n• Seguridad: Permite configuraciones con certificados SSL/TLS y WAF, entre otras medidas de protección."
-  },
-  {
-    pregunta: "Proporciona un ejemplo de cómo NGINX puede integrarse en un sitio web que sirve contenido estático y dinámico.",
-    respuesta: "Imagina un sitio web en el que:\n• NGINX actúa como servidor web para servir imágenes y archivos HTML (contenido estático).\n• NGINX funciona como proxy inverso, redirigiendo las solicitudes de búsqueda a un servidor backend que procesa y devuelve resultados dinámicos.\nDe esta forma, se optimiza el uso de recursos y se mejora la experiencia del usuario."
-  },
-  {
-    pregunta: "¿Qué es un servidor backend y cuál es su rol en una aplicación web?",
-    respuesta: "Un servidor backend es la parte del sistema que procesa las solicitudes enviadas desde el frontend. Sus funciones principales incluyen:\n• Procesar solicitudes y gestionar datos.\n• Ejecutar la lógica del sistema (cálculos, validaciones, etc.).\n• Conectarse a bases de datos para almacenar o recuperar información.\n• Enviar las respuestas procesadas de vuelta al frontend."
-  },
-  {
-    pregunta: "¿Cómo interactúan el frontend y el backend en una aplicación web?",
-    respuesta: "El proceso se desarrolla de la siguiente manera:\n1. El usuario interactúa con el frontend (por ejemplo, ingresando una consulta en un sitio web).\n2. El frontend envía la solicitud al servidor backend.\n3. El backend procesa la solicitud, consulta bases de datos y ejecuta la lógica necesaria.\n4. Finalmente, el backend envía una respuesta al frontend, que la presenta al usuario."
-  },
-  {
-    pregunta: "Da un ejemplo práctico de la interacción entre frontend y backend en una tienda en línea.",
-    respuesta: "Ejemplo:\n• Un usuario busca 'Criptomonedas de Trump' en una tienda en línea.\n• El frontend envía esta consulta al servidor backend.\n• El backend consulta la base de datos para encontrar productos relacionados y procesa la información.\n• Los resultados se devuelven al frontend, que muestra los productos encontrados al usuario."
-  }    
+  // Segundo conjunto de flashcards – Nivel Normal (25 flashcards)
+  { pregunta: "¿Qué es la seguridad en el hardware?", respuesta: "La seguridad en el hardware se refiere a las medidas y prácticas que garantizan el correcto funcionamiento físico de los dispositivos mediante la monitorización y el uso de herramientas de diagnóstico." },
+  { pregunta: "¿Qué función cumple un SAI en un sistema informático?", respuesta: "Un SAI (Sistema de Alimentación Ininterrumpida) suministra energía de reserva para mantener operativos equipos críticos durante fallos o fluctuaciones eléctricas." },
+  { pregunta: "¿Cuáles son los tipos básicos de SAI?", respuesta: "Los tipos básicos de SAI son: off-line, in-line y on-line, que varían en su tecnología y capacidad de protección." },
+  { pregunta: "¿Qué caracteriza a un SAI off-line?", respuesta: "Un SAI off-line es el más básico y económico, activándose solo cuando ocurre un fallo eléctrico, sin regular la corriente de forma continua." },
+  { pregunta: "¿Qué diferencia principal existe entre un SAI in-line y uno off-line?", respuesta: "El SAI in-line incorpora un regulador de voltaje (AVR) que estabiliza la corriente, a diferencia del off-line que solo activa la batería en caso de fallo." },
+  { pregunta: "¿Cuál es la ventaja principal de un SAI on-line?", respuesta: "El SAI on-line ofrece energía limpia y sin interrupciones, mediante doble conversión, ideal para entornos industriales y equipos sensibles." },
+  { pregunta: "¿Qué es RAID y para qué se utiliza?", respuesta: "RAID es una tecnología que distribuye y, en algunos casos, replica datos en varios discos para mejorar el rendimiento, la seguridad y la tolerancia a fallos." },
+  { pregunta: "¿Cuál es la diferencia esencial entre RAID 0 y RAID 1?", respuesta: "RAID 0 distribuye los datos entre varios discos para incrementar la velocidad, sin ofrecer redundancia, mientras que RAID 1 duplica los datos para asegurar la información." },
+  { pregunta: "¿Qué función cumple el kernel en un sistema operativo Linux?", respuesta: "El kernel es el núcleo del sistema operativo que gestiona los recursos, controla el hardware y permite la comunicación entre aplicaciones y dispositivos." },
+  { pregunta: "¿Qué son los registros (logs) en un sistema operativo?", respuesta: "Los registros son archivos que almacenan eventos, errores y actividades del sistema, ayudando en el monitoreo y diagnóstico de problemas." },
+  { pregunta: "¿Qué es HTTPS y cómo protege la información?", respuesta: "HTTPS es un protocolo que encripta la comunicación entre el navegador y el servidor, evitando que terceros intercepten o alteren los datos transmitidos." },
+  { pregunta: "¿Qué función tiene un firewall en una red?", respuesta: "Un firewall filtra el tráfico de red, permitiendo conexiones autorizadas y bloqueando accesos no deseados, lo que protege los sistemas frente a amenazas externas." },
+  { pregunta: "¿Qué es una VPN y para qué se utiliza?", respuesta: "Una VPN crea una conexión segura y cifrada sobre una red pública, permitiendo el acceso remoto a recursos internos de forma protegida." },
+  { pregunta: "¿Qué es un IDS y cómo ayuda en la seguridad de la red?", respuesta: "Un IDS (Sistema de Detección de Intrusos) monitorea el tráfico de red en busca de actividades sospechosas, alertando a los administradores ante posibles ataques." },
+  { pregunta: "¿Qué significa redundancia en el contexto del almacenamiento de datos?", respuesta: "La redundancia implica duplicar componentes o datos para que, ante una falla, otro elemento pueda asumir la función y evitar la pérdida de información." },
+  { pregunta: "¿Qué es un NAS y cuál es su función principal?", respuesta: "Un NAS (Network Attached Storage) es un dispositivo de almacenamiento conectado a la red que permite compartir y acceder a datos entre múltiples usuarios o equipos." },
+  { pregunta: "¿Qué es un SAN y cuáles son sus ventajas?", respuesta: "Un SAN (Storage Area Network) es una red de almacenamiento especializada que ofrece alta velocidad, gran capacidad y redundancia, ideal para entornos empresariales." },
+  { pregunta: "¿Por qué es importante la monitorización en la gestión de un SAI?", respuesta: "La monitorización permite detectar fallos en tiempo real, controlar el estado de la batería y programar respuestas automáticas, asegurando un funcionamiento óptimo del SAI." },
+  { pregunta: "¿Por qué se requiere mantenimiento periódico en un SAI?", respuesta: "El mantenimiento es esencial para asegurar que las baterías y demás componentes funcionen correctamente, evitando fallos inesperados y prolongando la vida útil del equipo." },
+  { pregunta: "¿Qué son las cuotas de disco y para qué sirven en un sistema?", respuesta: "Las cuotas de disco limitan el espacio de almacenamiento asignado a cada usuario, previniendo el abuso de recursos y asegurando el rendimiento del sistema." },
+  { pregunta: "¿Qué es el cifrado de extremo a extremo?", respuesta: "El cifrado de extremo a extremo garantiza que solo el emisor y el receptor puedan leer la información, protegiéndola de accesos no autorizados durante la transmisión." },
+  { pregunta: "¿Qué es un antimalware?", respuesta: "Un antimalware es un software diseñado para detectar y eliminar diversas amenazas (virus, troyanos, spyware) que pueden comprometer la seguridad de un sistema." },
+  { pregunta: "¿Para qué sirve el software de congelación en un equipo?", respuesta: "El software de congelación restaura la configuración original del equipo en cada reinicio, evitando cambios no autorizados y protegiendo contra infecciones o alteraciones maliciosas." },
+  { pregunta: "¿Cómo se genera una contraseña segura?", respuesta: "Una contraseña segura debe tener al menos 8 caracteres, combinando mayúsculas, minúsculas, números y símbolos, evitando información personal o secuencias predecibles." },
+  { pregunta: "¿Qué diferencia existe entre una política de firewall restrictiva y una permisiva?", respuesta: "Una política restrictiva bloquea todo el tráfico no autorizado, mientras que una permisiva permite más conexiones, lo que puede incrementar el riesgo de vulnerabilidades." },
+
+  // Tercer conjunto de flashcards – Nivel Difícil (25 flashcards)
+  { pregunta: "¿Cómo influye la monitorización en la optimización del rendimiento y la seguridad de un SAI en entornos empresariales?", respuesta: "La monitorización permite ajustar parámetros en tiempo real, detectar deterioros en la batería y automatizar respuestas ante incidencias, reduciendo tiempos de inactividad y mejorando la protección de equipos críticos." },
+  { pregunta: "¿Cuáles son las implicaciones de la doble conversión en un SAI on-line en términos de eficiencia energética?", respuesta: "La doble conversión ofrece energía continua y limpia, pero puede generar mayor consumo energético y requerir un mantenimiento más riguroso para mantener su eficiencia operativa." },
+  { pregunta: "¿Qué desafíos presenta la implementación de RAID por software frente a RAID por hardware?", respuesta: "RAID por software depende de los recursos del sistema, lo que puede afectar el rendimiento, mientras que RAID por hardware ofrece mayor velocidad y fiabilidad, aunque con mayor coste y complejidad en actualizaciones." },
+  { pregunta: "¿Cómo se integra la monitorización de un SAI con otros sistemas de gestión de infraestructura IT?", respuesta: "Mediante el uso de APIs y software centralizado, la monitorización del SAI se puede conectar con sistemas de gestión y alerta, permitiendo respuestas automatizadas y una visión unificada del estado de la infraestructura." },
+  { pregunta: "¿De qué forma contribuye la redundancia en sistemas RAID y clusters a la tolerancia a fallos en entornos críticos?", respuesta: "La redundancia permite que, ante la falla de un componente, otros asuman la carga sin interrupción del servicio, asegurando la continuidad operativa y protegiendo la integridad de los datos." },
+  { pregunta: "¿Qué aspectos se deben considerar al configurar un cluster de servidores para garantizar alto rendimiento y alta disponibilidad?", respuesta: "Es fundamental seleccionar hardware compatible, configurar correctamente la red y el middleware, y establecer políticas de redundancia y balanceo de carga que permitan la conmutación automática ante fallos." },
+  { pregunta: "¿Cuáles son los retos técnicos y económicos de implementar una SAN en grandes empresas?", respuesta: "Los retos incluyen la alta inversión inicial, la complejidad en la configuración y mantenimiento, y la necesidad de equilibrar la velocidad y redundancia sin comprometer la escalabilidad del sistema." },
+  { pregunta: "¿Cómo impacta el uso de protocolos de encriptación avanzados en el rendimiento de las comunicaciones HTTPS en entornos de alto tráfico?", respuesta: "La encriptación avanzada puede aumentar la carga en los servidores debido a procesos criptográficos intensivos, por lo que se debe optimizar la infraestructura para balancear seguridad y rendimiento." },
+  { pregunta: "¿Qué estrategias pueden mitigar las amenazas internas en una organización, dada la dificultad de distinguir accesos legítimos de maliciosos?", respuesta: "Implementar controles de acceso estrictos, monitoreo continuo, auditorías regulares y tecnologías de detección de anomalías ayuda a identificar y limitar las amenazas provenientes de usuarios internos." },
+  { pregunta: "¿Cómo se evalúa la efectividad de un sistema de detección de intrusos (IDS) en una red compleja?", respuesta: "Se evalúa a través de pruebas de penetración, análisis de falsos positivos y negativos, y la capacidad de respuesta ante ataques simulados, asegurando una detección oportuna y precisa." },
+  { pregunta: "¿Qué impacto tiene la fragmentación de datos en un sistema RAID respecto a rendimiento y tiempo de recuperación?", respuesta: "La fragmentación puede ralentizar el acceso a los datos y complicar la reconstrucción tras un fallo, lo que requiere algoritmos de optimización y mantenimiento periódico para mitigar su efecto." },
+  { pregunta: "¿Cómo puede afectar una actualización del kernel en Linux a la estabilidad y seguridad de un entorno productivo?", respuesta: "Aunque las actualizaciones del kernel suelen mejorar seguridad y rendimiento, pueden introducir incompatibilidades o fallos si no se prueban adecuadamente en entornos de staging antes de la implementación." },
+  { pregunta: "¿Qué técnicas avanzadas de encriptación se recomiendan para proteger datos en tránsito en redes corporativas?", respuesta: "Se recomiendan protocolos como TLS 1.3 combinados con algoritmos de encriptación asimétrica y simétrica, que ofrecen un equilibrio entre seguridad robusta y rendimiento en entornos de alta demanda." },
+  { pregunta: "¿Cómo se pueden combinar estrategias de redundancia, balanceo de carga y tolerancia a fallos en un cluster para maximizar la disponibilidad de servicios?", respuesta: "Integrando hardware redundante, configurando balanceadores de carga y estableciendo políticas de conmutación automática se garantiza que, ante fallos, los servicios se mantengan operativos sin interrupciones." },
+  { pregunta: "¿Qué consideraciones de seguridad son esenciales al implementar una VPN para conectar múltiples sucursales de una empresa?", respuesta: "Es crucial definir protocolos de encriptación robustos, autenticar a los usuarios mediante certificados digitales o MFA, y monitorizar constantemente el tráfico para detectar accesos no autorizados." },
+  { pregunta: "¿Cómo se puede optimizar el rendimiento de un SAN sin comprometer la seguridad de los datos?", respuesta: "Mediante la segmentación de la red SAN, la implementación de políticas de control de acceso estrictas y el uso de hardware y software de última generación que equilibre velocidad y encriptación." },
+  { pregunta: "¿Qué rol juegan las actualizaciones de firmware y software en la gestión de riesgos de dispositivos como SAI y firewalls?", respuesta: "Las actualizaciones corrigen vulnerabilidades, mejoran el rendimiento y aseguran la compatibilidad con nuevas tecnologías, siendo fundamentales para mantener la integridad y seguridad de los sistemas." },
+  { pregunta: "¿Cuáles son las implicaciones de utilizar antimalware y antivirus de distintos proveedores en un mismo entorno corporativo?", respuesta: "El uso de múltiples soluciones puede generar conflictos, aumentar la carga en el sistema y producir falsos positivos, por lo que es importante evaluar su compatibilidad y optar por una gestión centralizada de amenazas." },
+  { pregunta: "¿Cómo se puede implementar una política de contraseñas que equilibre seguridad y usabilidad en una organización heterogénea?", respuesta: "Se puede lograr mediante requisitos mínimos de complejidad, autenticación multifactor, educación continua y el uso de herramientas de gestión de contraseñas que faciliten el cumplimiento sin afectar la productividad." },
+  { pregunta: "¿Qué mecanismos se pueden emplear para detectar y prevenir ataques de ingeniería social en entornos empresariales?", respuesta: "La formación continua, simulacros de phishing y la implementación de políticas estrictas de verificación de identidad son esenciales para contrarrestar ataques basados en manipulación humana." },
+  { pregunta: "¿Cómo se evalúa el coste-beneficio de implementar sistemas de backup automatizados frente a procesos manuales de recuperación?", respuesta: "Se debe analizar la frecuencia de respaldos, tiempos de recuperación, inversión en hardware/software y el impacto potencial en la productividad para determinar la solución más rentable y eficaz." },
+  { pregunta: "¿Qué desafíos técnicos plantea la integración de soluciones de seguridad en redes híbridas que combinan infraestructura local y en la nube?", respuesta: "Los principales desafíos son la interoperabilidad, la coherencia en las políticas de seguridad y la gestión centralizada de accesos y datos en entornos heterogéneos." },
+  { pregunta: "¿Cómo influye el tamaño y complejidad de una red en la configuración de un firewall de nueva generación?", respuesta: "Redes más extensas y complejas requieren firewalls con inspección profunda de paquetes, alta escalabilidad y configuraciones precisas para gestionar múltiples protocolos y amenazas simultáneas." },
+  { pregunta: "¿Qué estrategias avanzadas se pueden implementar para asegurar la continuidad operativa ante un fallo catastrófico en un data center?", respuesta: "La replicación de datos en sitios geográficamente dispersos, la utilización de clusters de alta disponibilidad y la elaboración de planes de recuperación ante desastres permiten minimizar el impacto de fallos críticos." },
+  { pregunta: "¿Cómo se relacionan la implementación de políticas de seguridad, la formación de empleados y el uso de tecnología en la mitigación integral de riesgos cibernéticos?", respuesta: "La seguridad integral se logra combinando políticas claras, educación continua para fomentar una cultura de seguridad y la aplicación de tecnologías avanzadas que permitan detectar y responder proactivamente ante amenazas." },
+
+  // Cuarto conjunto de flashcards – NGINX y servidor backend (12 flashcards)
+  { pregunta: "¿Qué es NGINX y cuál es su principal funcionalidad?", respuesta: "NGINX es un software de servidor web de alto rendimiento que se utiliza principalmente para manejar tráfico web. Además, su funcionalidad va mucho más allá, ya que puede actuar como proxy inverso, balanceador de carga, servidor de correo y Gateway API en entornos de microservicios." },
+  { pregunta: "¿Cuáles son los principales usos de NGINX como servidor web?", respuesta: "1. Servir contenido estático (HTML, imágenes, CSS, JavaScript).\n2. Manejar un gran número de conexiones simultáneas de manera eficiente." },
+  { pregunta: "¿Qué función cumple NGINX como proxy inverso?", respuesta: "NGINX actúa como intermediario entre los clientes y los servidores backend, redirigiendo las solicitudes y mejorando la seguridad al ocultar los detalles internos del sistema." },
+  { pregunta: "¿Cómo distribuye NGINX la carga en entornos con múltiples servidores?", respuesta: "Mediante la función de balanceador de carga, NGINX distribuye el tráfico entre varios servidores backend usando métodos como round-robin, basado en IP o en función del peso asignado, evitando la sobrecarga en un solo servidor." },
+  { pregunta: "¿Qué ventajas aporta el uso de la caché en NGINX?", respuesta: "NGINX puede almacenar en caché contenido tanto estático como dinámico, lo que reduce la carga en los servidores backend y mejora la velocidad de carga para los usuarios finales." },
+  { pregunta: "¿Cómo se utiliza NGINX como servidor proxy para correo?", respuesta: "NGINX puede configurarse para actuar como proxy en protocolos de correo como IMAP, POP3 y SMTP, facilitando la gestión del tráfico de correo y mejorando la eficiencia en el procesamiento de mensajes." },
+  { pregunta: "¿Qué es un Gateway API y cómo se relaciona con NGINX?", respuesta: "En sistemas basados en microservicios, NGINX se utiliza como Gateway API para enrutar las solicitudes a servicios específicos, integrando y gestionando el tráfico entre múltiples componentes del sistema." },
+  { pregunta: "¿Cuáles son las principales ventajas de NGINX?", respuesta: "Entre sus ventajas destacan:\n• Rendimiento: Maneja miles de conexiones simultáneas con bajo consumo de recursos.\n• Escalabilidad: Se adapta fácilmente a entornos pequeños y grandes.\n• Flexibilidad: Su configuración modular permite personalizarlo para diversos usos.\n• Seguridad: Permite configuraciones con certificados SSL/TLS y WAF, entre otras medidas de protección." },
+  { pregunta: "Proporciona un ejemplo de cómo NGINX puede integrarse en un sitio web que sirve contenido estático y dinámico.", respuesta: "Imagina un sitio web en el que:\n• NGINX actúa como servidor web para servir imágenes y archivos HTML (contenido estático).\n• NGINX funciona como proxy inverso, redirigiendo las solicitudes de búsqueda a un servidor backend que procesa y devuelve resultados dinámicos.\nDe esta forma, se optimiza el uso de recursos y se mejora la experiencia del usuario." },
+  { pregunta: "¿Qué es un servidor backend y cuál es su rol en una aplicación web?", respuesta: "Un servidor backend es la parte del sistema que procesa las solicitudes enviadas desde el frontend. Sus funciones principales incluyen:\n• Procesar solicitudes y gestionar datos.\n• Ejecutar la lógica del sistema (cálculos, validaciones, etc.).\n• Conectarse a bases de datos para almacenar o recuperar información.\n• Enviar las respuestas procesadas de vuelta al frontend." },
+  { pregunta: "¿Cómo interactúan el frontend y el backend en una aplicación web?", respuesta: "El proceso se desarrolla de la siguiente manera:\n1. El usuario interactúa con el frontend (por ejemplo, ingresando una consulta en un sitio web).\n2. El frontend envía la solicitud al servidor backend.\n3. El backend procesa la solicitud, consulta bases de datos y ejecuta la lógica necesaria.\n4. Finalmente, el backend envía una respuesta al frontend, que la presenta al usuario." },
+  { pregunta: "Da un ejemplo práctico de la interacción entre frontend y backend en una tienda en línea.", respuesta: "Ejemplo:\n• Un usuario busca 'Criptomonedas de Trump' en una tienda en línea.\n• El frontend envía esta consulta al servidor backend.\n• El backend consulta la base de datos para encontrar productos relacionados y procesa la información.\n• Los resultados se devuelven al frontend, que muestra los productos encontrados al usuario." }
 ];
+
 
 
 
